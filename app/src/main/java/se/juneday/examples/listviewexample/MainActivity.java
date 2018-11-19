@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         ListView listView = (ListView) v;
         AdapterView.AdapterContextMenuInfo acMenuInfo = (AdapterView.AdapterContextMenuInfo) menuInfo;
-        String member = (String) listView.getItemAtPosition(acMenuInfo.position);
+        Member member = (Member) listView.getItemAtPosition(acMenuInfo.position);
         menu.setHeaderTitle("Manager " + member);
         menu.add(Menu.NONE, MENU_ENTRY_DELETE, Menu.NONE, "Delete");
         menu.add(Menu.NONE, MENU_ENTRY_DUPLICATE, Menu.NONE, "Duplicate");
